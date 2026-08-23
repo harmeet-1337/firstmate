@@ -713,6 +713,7 @@ SH
   assert_grep $'format\tfm-lint-telemetry-v1' "$telemetry" "telemetry format marker is missing"
   assert_grep $'jobs\t2' "$telemetry" "telemetry did not record bounded jobs"
   assert_grep $'root_count\t1' "$telemetry" "telemetry did not record root count"
+  assert_grep $'shard_count\t4' "$telemetry" "telemetry did not record the bounded logical shard count"
   assert_grep $'wall_seconds\t' "$telemetry" "telemetry did not record wall time"
   assert_grep $'user_seconds\t' "$telemetry" "telemetry did not record user CPU"
   assert_grep $'system_seconds\t' "$telemetry" "telemetry did not record system CPU"
